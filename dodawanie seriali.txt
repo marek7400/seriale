@@ -1,0 +1,34 @@
+Dodawanie seriali:
+
+
+1. W jaki sposób wpisuje się nazwę serialu?
+Nazwę wpisuje się bezpośrednio w oknie konsoli (Terminalu, Wierszu Poleceń CMD lub PowerShell), w którym uruchomiony jest skrypt.
+Uruchamiasz skrypt poleceniem python add_new_show.py.
+Program zatrzymuje się i wyświetla komunikat:
+Wprowadź tytuł serialu (lub naciśnij Enter, aby zakończyć):
+Wpisujesz tytuł (np. House of the Dragon lub The Bear) i naciskasz Enter.
+Następnie program pyta o rok:
+Wprowadź rok produkcji (np. 2022):
+Wpisujesz rok i naciskasz Enter.
+Skrypt samodzielnie wyszukuje dane, tłumaczy je i pyta o ostateczne zatwierdzenie (wpisanie T lub N).
+
+Czy można dodać kilka na raz?
+Tak, na dwa sposoby:
+Sposób A: Po kolei, w jednej sesji (bez restartu programu)
+Obecny skrypt działa w nieskończonej pętli. Po dodaniu jednego serialu nie wyłącza się, lecz od razu pyta o kolejny tytuł. Możesz w ten sposób dodać 10 seriali pod rząd. Aby zakończyć, po prostu naciskasz Enter na pustym pytaniu o tytuł.
+Sposób B: Masowo, z pliku tekstowego (pełny automat)
+Jeśli masz do dodania dłuższą listę (np. 20 seriali) i nie chcesz wpisywać ich ręcznie i za każdym razem klikać klawisza potwierdzenia, przygotowałem rozbudowaną wersję skryptu z obsługą trybu masowego.
+Skrypt pozwala teraz wybrać tryb pracy:
+Interaktywny – klasyczny (jeden po drugim z potwierdzaniem).
+Masowy – odczytuje listę z pliku tekstowego seriale.txt, pobiera dane, tłumaczy je, ściąga grafiki i dodaje wszystko na stronę w pełni automatycznie.
+Jak przygotować plik do dodawania masowego?
+Wystarczy, że w tym samym folderze utworzysz zwykły plik tekstowy o nazwie seriale.txt i wpiszesz do niego seriale (każdy w nowej linii) w formacie Tytuł, Rok, na przykład:
+
+
+The Bear, 2022
+Severance, 2022
+The Last of Us, 2023
+Succession, 2018
+
+Obsługiwany jest również format z nawiasem, np. The Bear (2022)).
+
